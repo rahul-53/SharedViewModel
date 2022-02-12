@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/messageSenderFragment">
+
+    <fragment
+        android:id="@+id/messageSenderFragment"
+        android:name="com.rahul.sharedviewmodel.MessageSenderFragment"
+        android:label="fragment_message_sender"
+        tools:layout="@layout/fragment_message_sender" >
+
+        <action
+            android:id="@+id/action_messageSenderFragment_to_messageReceiverFragment"
+            app:destination="@id/messageReceiverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/messageReceiverFragment"
+        android:name="com.rahul.sharedviewmodel.MessageReceiverFragment"
+        android:label="fragment_message_receiver"
+        tools:layout="@layout/fragment_message_receiver" />
+</navigation>
